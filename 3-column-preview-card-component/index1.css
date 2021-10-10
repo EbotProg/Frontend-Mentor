@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --clr-primary-900:hsl(31, 77%, 52%);
+    --clr-primary-500:hsl(184, 100%, 22%);
+    --clr-primary-200:hsl(179, 100%, 13%);
+
+    --clr-neutral-900:hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-500:hsl(0, 0%, 95%);
+ 
+    --ff-1:"Lexend Deca";
+    --fw-1-400:400;
+    --ff-2: "Big Shoulders Display";
+    --fw-2-700:700;
+}
+
+body *, body *::before,body *::after{
+    display: block;
+}
+
+*, *::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color:var(--clr-neutral-500);
+
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: min(100%,25rem);
+    margin: 2rem 1.5rem; 
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__sedans {
+    background-color: var(--clr-primary-900);
+    padding: 2rem;
+}
+
+.card__suvs {
+    background-color:var(--clr-primary-500);
+    padding: 2rem;
+}
+
+.card__luxury {
+    background-color: var(--clr-primary-200);
+    padding: 2rem;
+}
+
+.card__rows > * {
+    padding: 1rem;
+}
+
+.card__rows {
+    padding: 2.8rem;
+}
+
+.card__desc {
+    font-family: var(--ff-1);
+    font-weight: var(--fw-1-400);
+    color:var(--clr-neutral-900);
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+}
+
+.card__titles {
+    font-family: var(--ff-2);
+    font-weight: var(--fw-2-700);
+    font-size: 3rem;
+    color:var(--clr-neutral-500);
+}
+
+.card__btn {
+    text-decoration: none;
+    background-color:var(--clr-neutral-500);
+    width:11rem;
+    margin-top:1rem;
+    margin-left:1rem;
+    border-radius: 2rem;
+    text-align:center;
+    font-family:var(--ff-1);
+}
+.card__btn:hover{
+    color:var(--clr-neutral-900);
+    box-shadow: 0 0 0 2px var(--clr-neutral-500);
+}
+
+.card__sedans_btn:hover {
+    background-color: var(--clr-primary-900);
+   
+}
+
+.card__suvs_btn:hover {
+    background-color: var(--clr-primary-500);
+}
+
+.card__luxury_btn:hover {
+    background-color: var(--clr-primary-200);
+}
+
+.card__sedans_btn {
+    color:var(--clr-primary-900);
+}
+
+.card__suvs_btn {
+    color:var(--clr-primary-500);
+}
+
+.card__luxury_btn {
+    color:var(--clr-primary-200);
+}
+
+
+@media(min-width:1245px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "sedans suvs luxury"; 
+        width: min(100%, 60rem);
+        height: auto;
+    }
+
+    .card__sedans{
+        grid-area: sedans;
+    }
+
+    .card__suvs {
+        grid-area: suvs;
+    }
+    
+    .card__luxury {
+        grid-area: luxury;
+    }
+
+    .card__btn {
+        margin-top: 4rem;
+    }
+}
