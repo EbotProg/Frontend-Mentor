@@ -36,6 +36,15 @@ body {
     padding: 1.5rem;
 } 
 
+.sr-only {
+    position:absolute;
+    height: 1px;
+    width:1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 main {
     display: grid;
     place-items: center;
