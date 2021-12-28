@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --clr-p-blue:hsl(215, 51%, 70%);
+    --clr-p-cyan: hsl(178, 100%, 50%);
+    --clr-n-main-BG: hsl(217, 54%, 11%);
+    --clr-n-card-BG: hsl(216, 50%, 16%);
+    --clr-n-line: hsl(215, 32%, 27%);
+    --clr-n-white: hsl(0, 0%, 100%);
+
+    --fw-regular: 300;
+    --fw-semi-bold: 400;
+    --fw-bold: 600;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *, body *::before, body *::after{
+    display: block;
+}
+
+li{
+    list-style-type: none;
+}
